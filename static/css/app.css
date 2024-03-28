@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Roboto:wght@400;700;900&display=swap');
+
+:root {
+  --primario: #4895d1;
+  --secundario: #0d3056;
+  --lila: #632481;
+  --rojo: #e4152d;
+  --gris: #d4d4ce;
+  --blanco: #fff;
+  --amarillo: #ffc72c;
+
+  --separacion: 5rem;
+
+  --fuentePrincipal: 'Lato', sans-serif;
+  --fuenteSecundaria: 'Roboto', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 10 px = 1rem */
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}

@@ -1,0 +1,12 @@
+"""
+    URL configuration for adbweb project.
+"""
+from django.contrib import admin
+from django.urls import path
+
+from .views import home, contact
+
+urlpatterns = [
+    path('', home, name='home'),
+    path('contacto', contact, name='contact'),
+]
