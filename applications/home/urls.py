@@ -1,12 +1,11 @@
 """
-    URL configuration for adbweb project.
+    URL configuration for home app.
 """
-from django.contrib import admin
 from django.urls import path
 
-from .views import home, contact
+from . import views
 
 urlpatterns = [
-    path('', home, name='home'),
-    path('contacto', contact, name='contact'),
+    path('', views.home, name='home'),
+    path('contacto', views.create_post, name='contact'),
 ]

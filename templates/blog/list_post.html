@@ -1,0 +1,13 @@
+{% extends 'blog/blog_template.html' %}
+
+{% block content %}
+
+    {% for post in posts %}
+        <ul>
+            <li>{{post.title}}</li>
+            <li>{{post.content | safe }}</li>
+            <li>{{post.is_active}}</li>
+        </ul>
+    {% endfor %}
+
+{% endblock %}

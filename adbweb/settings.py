@@ -37,9 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
 
     # Apps
-    'applications.home.apps.HomeConfig'
+    'applications.home.apps.HomeConfig',
+    'applications.blog.apps.BlogConfig'
 ]
 
 MIDDLEWARE = [
@@ -78,8 +80,11 @@ WSGI_APPLICATION = 'adbweb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'adbweb/db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'adbweb',
+        'HOST': 'localhost',
+        'USER': 'root',
+        'PASSWORD': 'Ablanco156*'
     }
 }
 
@@ -119,6 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'adbweb/static/'
+STATIC_ROOT = BASE_DIR / "adbweb/staticfiles"
 STATICFILES_DIRS = [
     BASE_DIR / "adbweb/static"
 ]
