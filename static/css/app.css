@@ -18,9 +18,108 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; /* 10 px = 1rem */
+  font-family: var(--fuentePrincipal);
 }
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
+
+body {
+  font-family: var(--fuentePrincipal);
+  font-size: 1.6rem; 
+  line-height: 1.2;
+}
+
+/** start global styles */
+
+h1, h2, h3 {
+  font-family: var(--fuenteSecundaria);
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secundario);
+}
+
+
+/** end global styles */
+
+/** start utilities styles */
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+/** end utilities styles */
+
+.header {
+  border-bottom: 1px solid var(--gris);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 130px;
+  padding: 1rem;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--primario);
+  padding: 0 2rem;
+}
+
+.hero {
+  background-image: url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55rem;
+}
+
+.list-services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 2rem;
+  padding-top: var(--separacion);
+
+}
+.services-title {
+  color: var(--secundario);
+  font-size: 3rem;
+  text-align: center;
+}
+
+

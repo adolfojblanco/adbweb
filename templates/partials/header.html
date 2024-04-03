@@ -1,0 +1,16 @@
+{% load static %}
+<header class="header">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="{% static 'images/logo.png' %}" alt="">
+    </div>
+    <nav class="nav">
+      <a class="nav-link" href="{% url 'home:index' %}">Inicio</a>
+      <a class="nav-link" href="#">Proyectos</a>
+      <a class="nav-link" href="#">Servicios</a>
+      <a class="nav-link" href="{% url 'blog:posts_list' %}">Blog</a>
+      <a class="nav-link" href="{% url 'home:index' %}">Nosotros</a>
+      <a class="nav-link" href="{% url 'home:contact' %}">Contacto</a>
+    </nav>
+  </div>
+</header>
