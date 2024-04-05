@@ -7,14 +7,13 @@
 
 </div>
 
-<section class="container">
-  <h2 class="services-title">Nuestros Servicios</h2>
+<section class="container services">
+  <h2>Nuestros Servicios</h2>
   <div class="list-services">
-
     {% for service in services  %}
-      <div>
+      <div class="service">
         <img src="{{ service.image.url }}" alt="{{service.title}}">
-        <a href="#">{{service.title}}</a>
+        <a href="{% url 'services:details' service.slug %}">{{service.title}}</a>
       </div>
     {% endfor%}
   </div>

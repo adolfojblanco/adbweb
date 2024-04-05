@@ -1,13 +1,15 @@
-from django.shortcuts import render, HttpResponse, redirect
 from django.contrib import messages
+from django.shortcuts import redirect, render
+
 from applications.services.models import Service
+
 from .forms import ContactForm
 
 
 # Home View
 def home(request):
     services = Service.objects.filter(is_active=True)
-    return render(request, "home/index.html", {'services': services})
+    return render(request, "home/index.html", {"services": services})
 
 
 # Contact view
@@ -16,12 +18,12 @@ def contact(request):
 
 
 def create_post(request):
-    if request.method == 'POST':
+    if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
-            contact = form.save()
+            form.save()
             messages.success(request, "Se envio correctamente el mensaje")
-            return redirect('home:contact', {"form": form})
+            return redirect("home:contact", {"form": form})
     else:
         form = ContactForm()
 
