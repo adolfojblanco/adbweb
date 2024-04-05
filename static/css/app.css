@@ -59,6 +59,18 @@ a {
   color: var(--secundario);
 }
 
+.text-primary {
+  color: var(--primario);
+}
+
+.text-secundary {
+  color: var(--secundario);
+}
+
+.text-center {
+  text-align: center;
+}
+
 
 /** end global styles */
 
@@ -111,10 +123,12 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   height: 55rem;
+  background-position: center center;
+  /** Pocisiona la imagen */
 }
 
 .services {
-  padding-top: var(--separacion);
+  padding: var(--separacion);
 }
 
 .list-services {
@@ -122,17 +136,20 @@ a {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   font-size: 2rem;
-
+  margin-top: var(--separacion);
 }
 
 .services h2 {
   color: var(--secundario);
   font-size: 4rem;
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .services img {
   max-width: 100%;
+  display: block;
 }
 
 .service a {
@@ -140,4 +157,29 @@ a {
   display: block;
   padding: 2rem;
   font-size: 2rem;
+}
+
+.service a:hover {
+  background-color: var(--primario);
+  color: var(--blanco);
+  font-weight: bold;
+}
+
+.about-us {
+  background-image: linear-gradient(to right, transparent 50%, var(--primario) 50%, var(--primario) 100%), url(../images/hero.jpg);
+  background-position: left center;
+  padding: 10rem 0;
+  background-repeat: no-repeat;
+  background-size: 100%, 100%;
+}
+
+.about-us-grid {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-us-text {
+  flex-basis: 50%;
+  padding-left: 5rem;
+  color: var(--blanco);
 }

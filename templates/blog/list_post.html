@@ -1,13 +1,20 @@
 {% extends 'template_base.html' %}
-
+{% block title %} AdbWebDesing - Blog {% endblock title %}
 {% block content %}
 
     {% for post in posts %}
-        <ul>
-            <li>{{post.title}}</li>
-            <li>{{post.content | safe }}</li>
-            <li>{{post.is_active}}</li>
-        </ul>
+    <main class="main-content container">
+        <h1>Nuestro Blog</h1>
+        <section class="contenedor-blog">
+            <div class="blog">
+                <article>
+                    <header>
+                        
+                    </header>
+                </article>
+            </div>
+        </section>
+    </main>
     {% endfor %}
 
 {% endblock %}
