@@ -1,7 +1,7 @@
 {
   "apps": [
     {
-      "name": "otreze-web",
+      "name": "adbweb-web-django",
       "script": "manage.py",
       "args": ["runserver", "--settings=adbweb.settings.production", "0.0.0.0:8090"],
       "exec_mode": "fork",
