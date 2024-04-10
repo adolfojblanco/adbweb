@@ -1,20 +1,36 @@
-{% extends 'template_base.html' %}
-{% block title %} AdbWebDesing - Blog {% endblock title %}
-{% block content %}
+{% extends 'template_base.html' %} 
+    {% block title %} AdbWebDesing - Blog {% endblock title %} 
+{%block content %} 
 
-    {% for post in posts %}
-    <main class="main-content container">
-        <h1>Nuestro Blog</h1>
-        <section class="contenedor-blog">
-            <div class="blog">
-                <article>
-                    <header>
-                        
-                    </header>
-                </article>
-            </div>
-        </section>
-    </main>
-    {% endfor %}
 
-{% endblock %}
+{% for post in posts %}
+<main class="main-content container">
+  <h1>Nuestro Blog</h1>
+  <section class="blog-container">
+    <div class="blog">
+      <article>
+        <h2>{{post.title}}</h2>
+        <div class="image">
+          <img src="{{ post.image.url }}" alt="{{service.title}}">
+        </div>
+        <div class="entrada-meta">
+          <p>Fecha: <span>22 Octubre 2023</span></p>
+        </div>
+        <div class="entrada-blog">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nostrum suscipit asperiores, ex eveniet velit est fuga amet blanditiis cumque, recusandae natus rerum unde ullam, voluptas consequatur iure! Eveniet, molestias.
+
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis sequi eos laudantium quibusdam error nulla vitae sint minima ea neque omnis nam facilis ex, aliquid modi aperiam eius corrupti. Cum?
+        </div>
+      </article>
+    </div>
+    <aside>
+      <h3>Otras entradas:</h3>
+      <ul>
+        <li>Un Post</li>
+        <li>Un Post</li>
+        <li>Un Post</li>
+      </ul>
+    </aside>
+  </section>
+</main>
+{% endfor %} {% endblock %}

@@ -25,9 +25,11 @@ class Category(models.Model):
 class Post(models.Model):
     title = models.CharField("Titulo", max_length=255)
     content = RichTextField("Contenido", blank=True)
+    image = models.ImageField(upload_to="static/images/blog/", blank=True)
     slug = models.CharField(max_length=100)
     create_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
     categories = models.ManyToManyField("Category", related_name="posts")
 
     def __str__(self):
