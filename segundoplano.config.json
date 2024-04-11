@@ -3,7 +3,7 @@
     {
       "name": "adbweb-web-django",
       "script": "manage.py",
-      "args": ["runserver", "--settings=adbweb.settings.production", "0.0.0.0:8090"],
+      "args": ["runserver", "--settings=adbweb.settings.prod", "0.0.0.0:8090"],
       "exec_mode": "fork",
       "instances": "1",
       "wait_ready": true,

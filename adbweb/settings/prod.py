@@ -2,7 +2,7 @@ import os
 
 from .base import *  # noqa: F403
 
-DEBUG = False
+DEBUG = True
 SECRET_KEY = "django-insecure-ntm$)98im4mqk8$h+kk0x7yeepocr&lg(t3#q&%2f9n&&vb+!w"
 
 CSRF_TRUSTED_ORIGINS = ["https://adbwebdesing.com", "https://www.adbwebdesing.com"]
