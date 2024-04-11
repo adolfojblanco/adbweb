@@ -4,6 +4,7 @@ Django settings for adbweb project.
 
 import os
 from pathlib import Path
+
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -84,15 +85,15 @@ USE_TZ = True
 # static files
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static/")]
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Email Settings
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = load_dotenv('EMAIL_HOST')
-EMAIL_PORT = load_dotenv('EMAIL_PORT')
-EMAIL_USE_TLS = load_dotenv('EMAIL_USE_TLS')
-EMAIL_USE_SSL = load_dotenv('EMAIL_USE_SSL')
-EMAIL_HOST_USER = load_dotenv('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = load_dotenv('EMAIL_HOST_PASSWORD')
+EMAIL_HOST = load_dotenv("EMAIL_HOST")
+EMAIL_PORT = load_dotenv("EMAIL_PORT")
+EMAIL_USE_TLS = load_dotenv("EMAIL_USE_TLS")
+EMAIL_USE_SSL = load_dotenv("EMAIL_USE_SSL")
+EMAIL_HOST_USER = load_dotenv("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = load_dotenv("EMAIL_HOST_PASSWORD")

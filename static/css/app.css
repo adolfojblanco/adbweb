@@ -183,3 +183,12 @@ a {
   padding-left: 5rem;
   color: var(--blanco);
 }
+
+/** Blog */
+.blog-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 2rem;
+}
+
+/** end blog */
